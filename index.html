@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="./assets/Logo@2x.png" alt="Logo de alura">
+    </header>
+    <main class="presentacion">
+        <section class="presentacion__encriptador__texto">
+            <form name="formulario_ingreso_texto" class="presentacion__encriptador__texto__formulario">
+                <textarea id="texto__formulario" cols="30" rows="10" name="texto" placeholder="Ingrese el texto aquí"></textarea>
+            </form>
+            <div >
+                <i class="bi bi-exclamation-circle-fill presentacion__encriptador__texto__botones__exclamacion"></i>
+                <span class="presentacion__encriptador__texto__nota">Solo letras minúsculas y sin acentos</span>                    
+            </div>
+            <div class="presentacion__encriptador__texto__botones">             
+                <div class="presentacion__encriptador__botones">
+                    <button class="presentacion_encriptador__boton " onclick="botonEncriptar()">Encriptar</button>
+                    <button class="presentacion_encriptador__boton " onclick="botonDesencriptar()" >Desencriptar</button>
+                </div> 
+            </div>
+        </section>
+        
+        <section class="presentacion__texto__encriptado">
+            <div id="presentacion__texto__encriptado__mensaje__inicial" class="texto__mensaje__inicial">
+                <img src="./assets/Muñeco.png" alt="">
+                <div  class="alerta_1">Ningún mensaje fue encontrado</div>
+                <div class="alerta_2">Ingresa el texto que desees encriptar o desencriptar.</div>
+                
+            </div>
+            <p id="texto__encriptado"> </p>   
+            <button id="boton_copiar" class="presentacion_encriptador__boton__copiar " onclick="botonCopiar()">Copiar</button> 
+             
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por <span>Cristian</span> - 2024</p>
+    </footer>   
+    <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --color-primario: #F3F5FC;
+    --fuente-inter: "Inter", sans-serif;
+    --color-secundario: #0A3871;
+    --color-terciario: #495057;
+    --color-cuaternario: white;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--color-primario);
+    box-sizing: border-box;
+    
+}
+
+.header{
+    padding: 40px  0 0 40px;
+    display: flex;
+    height: 48px;
+}
+
+
+.logo{
+    padding-top: 10px;
+    margin-left: 10px;
+ 
+}
+
+.presentacion{
+    display: flex;     
+    padding:  0%   2%;
+    font-family: var(--fuente-inter);
+    gap: 30px;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+.presentacion__encriptador__texto{    
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px 0;
+    width: 75%;    
+}
+.presentacion__encriptador__texto__formulario{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+.presentacion__encriptador__texto__formulario textarea{
+     
+    background-color: var(--color-primario);    
+    color: var(--color-secundario);
+    width: 100%;   /* Ancho del campo de entrada */
+    height: 400px;   /* Altura del campo de entrada */
+    padding: 8px;   /* Relleno interno del campo */
+    font-size: 1.563rem; /* Tamaño de la fuente del texto */    
+    border: 2px solid var(--color-secundario); /* Borde del campo PONER NONE    */
+    border-radius: 15px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho y alto */
+}
+
+/* Estilo para el texto del marcador de posición */
+.presentacion__encriptador__texto__formulario textarea::placeholder {
+    color: var(--color-secundario); /* Color del texto del marcador de posición */
+    font-family: var( --fuente-inter); /* Fuente del texto del marcador de posición */
+    font-size: 2rem; /* Tamaño de la fuente del marcador de posición */
+}
+.presentacion__encriptador__texto__botones__exclamacion {
+    font-size: 1.125rem; /* Cambia el tamaño del ícono */
+    color:var(--color-terciario);      /* Cambia el color del ícono */
+}
+.presentacion__encriptador__texto__nota{
+    font-size: 1.125rem;
+    color: var(--color-terciario);
+}
+
+.presentacion__encriptador__botones{
+    display: flex;
+    gap: 24px ;
+    margin-top: 18px;
+}
+.presentacion_encriptador__boton{     
+    width: 50%;
+    padding: 24px 0 ;
+    border-radius: 24px;
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    font-weight: normal; 
+    color: var(--color-secundario);
+    background-color: var(--color-primario);    
+    
+}
+
+.presentacion_encriptador__boton:hover,
+.presentacion_encriptador__boton__copiar:hover {
+    color: var(--color-primario); 
+    border: 2px solid var(--color-secundario);
+    cursor: pointer;   
+}
+
+.presentacion_encriptador__boton:hover {
+    background-color: var(--color-secundario);
+}
+
+.presentacion_encriptador__boton__copiar:hover {
+    background-color: #051b35;
+}
+
+.presentacion__texto__encriptado{
+    width: 25%;
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+    background-color: var(--color-cuaternario);
+    border: none;
+    border-radius: 1.5rem;
+    color: var(--color-secundario);
+    padding: 32px;
+   
+    gap: 20px; /* Espaciado entre los elementos */
+    
+
+}
+
+#texto__encriptado {
+    flex-grow: 1; /* Ocupa el espacio disponible, empujando el botón hacia abajo */
+    align-self: flex-start; /* Alinea el texto encriptado al inicio */
+    font-size: 1.5rem;
+     
+}
+
+
+.texto__mensaje__inicial{
+    text-align: center;
+    font-family: var(--fuente-inter);
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Asegura que tome todo el espacio disponible */
+    width: 100%; 
+}
+.alerta_1{
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+}
+.alerta_2{
+    font-size: 1rem;
+}
+/* Estilo predeterminado para ocultar el botón "Copiar" */
+#boton_copiar {
+    display: none;
+}
+
+.presentacion_encriptador__boton__copiar {
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: 24px 0 ;     
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    font-weight: normal; 
+    color: var(--color-secundario);
+    background-color: #dbe5f1;
+    margin-top: 20px; /* Espaciado superior */
+    border: none;
+}
+
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 1.5rem;
+    color: var(--color-primario);
+    text-align: center;
+    font-size: 1.5rem  ;
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    
+}
+
+@media (max-width: 1100px ){
+    .presentacion{
+        flex-direction: column;
+        margin-left: 2px;
+    }
+
+    .presentacion__encriptador__texto{
+        width: auto;
+        padding: 2%;
+    }
+    .presentacion__texto__encriptado{
+        width: auto;
+    }
+    .texto__mensaje__inicial img {
+        display: none;
+    }
+     
+}
