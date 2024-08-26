@@ -72,6 +72,7 @@ function validador(cadena) {
     return tieneMay||tieneAcento||tieneCaracterEspecial;
 } 
 
+/* Función del botón copiar  */
 function botonCopiar(){
     const textoEncriptado = document.getElementById('texto__encriptado').innerText;
     navigator.clipboard.writeText(textoEncriptado);
